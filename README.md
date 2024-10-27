@@ -19,6 +19,8 @@ covid-19-visualization/
 ├── index.html 
 ├── script.js 
 ├── styles.css
+├── covid-19.png
+├── tierra.png
 └── Dataset/
     ├── population_by_country_2020.csv 
     └── WHO-COVID-19-global-data.csv
