@@ -1,0 +1,325 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgb(0, 0, 0);
+    background-color: #34303024;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+  
+      ::-webkit-scrollbar-track {
+        background: #48474b;;
+      }
+  
+      ::-webkit-scrollbar-thumb {
+        background: #d7d3e2;
+        border-radius: 10px;
+      }
+  
+      :hover::-webkit-scrollbar-thumb {
+        background: #827373;
+      }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.headerCard{
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.language_btn {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+}
+
+.language_btn i {
+    font-size: 18px;
+}
+
+.dropdown-container {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: block;
+    margin-right: 2rem;
+    margin-top: -0.8rem;
+    font-size: 10px;
+}
+
+.dropdown-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-container ul li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-container ul li a {
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+}
+
+.dropdown-container ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.language-dropdown:hover .dropdown-container {
+    display: block;
+}
+
+.primary{
+    padding-right: 2rem;
+    margin-top: -4rem;
+}
+
+#endDateDisplay{
+    margin-left: 0.5rem
+}
+
+#languageDropdown {
+    display: none;
+}
+
+#title, #lineChartTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#toggleButton, #lineChartToggleButton {
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: steelblue;
+    border-style: none;
+}
+
+.buttonCustom{
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: rgb(62, 90, 94);
+    border-style: none;
+}
+
+.country {
+    stroke: #fff;
+    stroke-width: 0.5px;
+}
+
+.country:hover {
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+.line {
+    fill: none;
+    stroke-width: 2px;
+    opacity: 0.3;
+}
+
+.line:hover {
+    opacity: 1;
+    stroke-width: 3px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    height: auto;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.header__brand{
+    position: relative;
+    width: 100%;
+    height: 4.7rem;
+    background: #fff;
+}
+
+.header__logo{
+    padding-left: 3.2rem;
+}
+
+.header__logo img {
+    display: inline-block;
+    width: auto;
+    max-height: 3rem;
+}
+
+.img--responsive, .img-responsive {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+
+.l-flex--align-center, .l-flex--center {
+    align-items: center;
+}
+
+.l-flex--center {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}   
+
+#languageSwitcher{
+    cursor: pointer;
+}
+
+#languageSwitcher li.active {
+    background-color: #042354;
+    color: white;
+    border-color: #042354;
+}
+
+#languageSwitcher li.inactive {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+    border-color: white;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #title, #lineChartTitle {
+        margin-bottom: 0;
+    }
+
+    #toggleButton, #lineChartToggleButton {
+        margin-left: 20px;
+    }
+
+    .card {
+        width: 960px;
+    }
+
+    .header__logo img {
+        max-height: 4rem;
+    }
+
+    .header__brand{
+        height: 5.5rem;
+    }
+}
+
+
+

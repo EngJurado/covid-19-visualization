@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COVID-19</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <link rel="icon" href="covid-19.png" type="image/png">
+        <link rel="iconTierra" href="tierra.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="data.js"></script>
+        </head>
+    
+    <body id="root">
+        
+        <header class="header header__brand l-flex--center" id="page-header">
+            <div class="header__logo col-xs-7">
+                <a href="https://www.unir.net" data-gtm-container="header" data-gtm-category="logo_home" data-gtm-action="navigation">
+                    <img width="613" height="137" src="https://www.unir.net/wp-content/uploads/2019/11/Unir_2021_logo.svg" class="no-lazy img-responsive" alt="Unir Logo" loading="eager">
+                </a>
+            </div>
+        
+            <div class="primary">
+                <div class="container">                        
+                    <div class="header-tools">             
+                        <div class="language-dropdown dropdown">
+                            <button class="language_btn" id="languageButton" aria-label="Seleccionar idioma">
+                                <img src="tierra.png" alt="Seleccionar idioma" width="20" height="20">
+                            </button>                            
+        
+                            <div class="dropdown-container" id="languageDropdown">
+                                <ul class="language-selector" id="languageSwitcher">
+                                    <li id="spanishButton" ><a>Español</a></li>
+                                    <li id="englishButton"><a>English</a></li>
+                                </ul>
+                            </div>
+                        </div>                           
+                    </div>                    
+                </div>
+            </div>
+        </header>
+        
+        <h1 id="titlePage">VISUALIZATION OF COVID-19 INFORMATION</h1>
+
+        <div id="controls">
+            <button id="playButton" class="buttonCustom">▶️ Play</button>
+            <button id="stopButton" class="buttonCustom">⏹ Stop</button>
+            <button id="resetButton" class="buttonCustom">🔄 Reset</button>
+        </div>
+
+        <div id="sliderContainer">   
+            <div class="slider-container">
+                <span id="startDateDisplay"></span>
+                <input type="range" id="dateRangeSlider" min="0" max="241" value="241" step="1" class="range-slider">
+                <span id="endDateDisplay"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header headerCard">
+                <div id="title">Cases per 100,000 inhabitants</div>
+                <button id="toggleButton">Toggle to deaths</button>
+            </div>
+            <svg id="choroplethMap" width="960" height="600"></svg>
+        </div>
+        <div class="card">
+            <div class="header headerCard">
+                <div id="lineChartTitle">Cases per 100,000 inhabitants</div>
+                <button id="lineChartToggleButton">Toggle to deaths</button>
+            </div>
+            <svg id="lineChart" width="960" height="500"></svg>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
